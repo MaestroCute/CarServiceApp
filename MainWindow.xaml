@@ -7,6 +7,23 @@
         mc:Ignorable="d"
         Title="Подай на 16" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <Grid Background= "{StaticResource ColorSecondary}"/>
+        <Grid Grid.Row="2" Background="{StaticResource ColorSecondary}"/>
+
+        <Image HorizontalAlignment="Left" Source="Assets/service_logo.png"/>
         
+        <Button Content="Назад" HorizontalAlignment="Right"
+                Name="BtnName" Click="BtnName_Click"/>
+
+        <TextBlock Style="{StaticResource BlockHeader}"
+                   Text="{Binding ElementName=FrameMain, Path=Content.Title}"/>
+
+        <Frame Grid.Row="1" Name="FrameMain" NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

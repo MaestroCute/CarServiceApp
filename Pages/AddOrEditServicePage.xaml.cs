@@ -13,23 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CarServiceApp
+namespace CarServiceApp.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AddOrEditServicePage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddOrEditServicePage : Page
     {
-        public MainWindow()
+        public AddOrEditServicePage()
         {
             InitializeComponent();
-            FrameMain.Navigate(new Pages.ServicesPage());
-        }
-
-        private void BtnName_Click(object sender, RoutedEventArgs e)
-        {
-            if (FrameMain.CanGoBack)
-                FrameMain.GoBack();
         }
     }
 }
