@@ -9,6 +9,40 @@
       Title="Добавление услуги">
 
     <Grid>
-        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockCommon}" Text="Название*"/>
+                    <TextBox x:Name="TBoxTitle" MaxLength="100"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockCommon}" Text="Стоимость*"/>
+                    <TextBox x:Name="TBoxCost"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockCommon}" Text=" Длит-сть(мин)*"/>
+                    <TextBox x:Name="TBoxDuration"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockCommon}" Text="Описание"/>
+                    <TextBox x:Name="TBoxDescription" Height="100" TextWrapping="Wrap"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Style="{StaticResource BlockCommon}" Text="Скидка"/>
+                    <TextBox x:Name="TBoxDiscount"/>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel VerticalAlignment="Center" >
+                <Border Margin="5" Width="200" Height="175" BorderThickness="1" BorderBrush="{StaticResource ColorAccent}">
+                    <Image x:Name="ImageService"/>
+                    
+                </Border>
+                <Button x:Name="BtnSelectImage" Width="200" Click="BtnSelectImage_Click"
+                        Content="Выбрать изображение"/>
+                <Button x:Name="BtnSave" Width="200" Click="BtnSave_Click" Content="Сохранить"/>
+                
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Page>

@@ -15,5 +15,7 @@ namespace CarServiceApp
     {
         public static Entities.CarServiceBaseEntities Context
         { get; } = new Entities.CarServiceBaseEntities();
+
+        public static Entities.User CurrentUser = null;
     }
 }

@@ -64,5 +64,21 @@ namespace CarServiceApp.Entities
                     return "White";
             }
         }
+
+        public string AdminControlsVisibility
+        {
+            get
+            {
+                //1 - admin, 2 - user
+                if (App.CurrentUser.RoleId == 1)
+                {
+                    return "Visible";
+                }
+                else
+                {
+                    return "Hidden";
+                }
+            }
+        }
     }
 }
